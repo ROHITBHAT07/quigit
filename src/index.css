@@ -40,13 +40,50 @@ body {
   width: 50rem;
 }
 
+/* just checked logo  */
 .app-header {
   width: 66rem;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
+
+.app-header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.3rem;
+  background: linear-gradient(
+    45deg,
+    #8e44ad,
+    #3498db,
+    #2ecc71
+  ); /* Metallic gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3),
+    /* 1st shadow layer for depth */ 8px 8px 0px rgba(0, 0, 0, 0.2),
+    /* 2nd shadow layer for 3D effect */ 12px 12px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  animation: metallic-shine 3s infinite linear;
+}
+
+@keyframes metallic-shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* .app-header {
+  width: 66rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .error {
   text-align: center;
@@ -83,11 +120,69 @@ h4 {
   margin-bottom: 2.4rem;
 }
 
+/* just checked start */
+
 .start {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #2c2f33;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Arial", sans-serif;
 }
+
+.start h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 3px 3px 0px #000000, 6px 6px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.15rem;
+}
+
+.start p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #c0c0c0;
+}
+
+.start button {
+  padding: 1.5rem 3rem; /* Bigger button */
+  font-size: 1.3rem; /* Larger font size */
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(
+    145deg,
+    #ff6b6b,
+    #ff4b4b
+  ); /* New vibrant red gradient */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4),
+    -4px -4px 8px rgba(255, 255, 255, 0.1); /* Stronger shadow for 3D effect */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.start button:hover {
+  background: linear-gradient(
+    145deg,
+    #ff4b4b,
+    #ff3030
+  ); /* Darker shade on hover */
+  transform: translateY(-7px); /* Increased lift on hover */
+  box-shadow: 8px 8px 14px rgba(0, 0, 0, 0.5),
+    -5px -5px 12px rgba(255, 255, 255, 0.15); /* More pronounced shadow on hover */
+}
+
+/* .start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 
 .progress {
   margin-bottom: 4rem;
